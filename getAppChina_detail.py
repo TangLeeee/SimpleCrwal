@@ -17,7 +17,7 @@ CMD = '%d,%s,%s,%s,%s,%s,%s,"%s"\n'
 
 fout = open('appChina_detail.csv','a')
 
-for i in range(577, len(lines)):
+for i in range(len(lines)):
     print i
     line = lines[i]
     tL = line.split(',')
@@ -33,15 +33,21 @@ for i in range(577, len(lines)):
 
     #print soup
     totInfo = soup.select('div.other-info p')[1:]
+    #print len(totInfo)
     appType = ""
     appVersion = ""
     appUpdateTime = ""
     appSize = ""
 
-    if len(totInfo) > 0:
+    if len(totInfo) == 6:
         appType = totInfo[4].string[3:].strip().encode('utf8')
         appVersion = totInfo[2].string[3:].strip().encode('utf8')
         appUpdateTime = totInfo[1].string[3:].strip().encode('utf8')
+        appSize = totInfo[0].string[3:].strip().encode('utf8')
+
+    if len(totInfo) == 5:
+        appType = totInfo[3].string[3:].strip().encode('utf8')
+        appVersion = totInfo[1].string[3:].strip().encode('utf8')
         appSize = totInfo[0].string[3:].strip().encode('utf8')
 
 
@@ -52,10 +58,12 @@ for i in range(577, len(lines)):
     if len(soup.select('div.main-info p.art-content'))> 0:
         totDetail = soup.select('div.main-info p.art-content')[0].get_text()
 
-    fItem = open('info/%d.txt' % i,'w')
-    fItem.write(CMD % (i, appName, appType, appVersion, appUpdateTime, appSize, appUrl, appIntro))
-    fItem.write(totDetail.encode('utf8'))
-    fItem.close()
-    time.sleep(2)
+    if len(totInfo) > 0:
+        fItem = open('info/%d.txt' % i,'w')
+        fItem.write(CMD % (i, appName, appType, appVersion, appUpdateTime, appSize, appUrl, appIntro))
+        fItem.write(totDetail.encode('utf8'))
+        fItem.close()
+        time.sleep(2)
+
 
 fout.close()
