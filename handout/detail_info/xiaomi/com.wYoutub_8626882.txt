@@ -1,0 +1,2 @@
+Youtub,com.wYoutub_8626882,769946,Aasif1,0,0,9.02 M,2.0,2019-02-22
+A video description is a piece of metadata that helps YouTube understand the content of a video. Descriptions that are well optimized can lead to higher rankings in YouTube search. Along with your video title and tags, YouTube uses your description to understand the content (and context) of your video content.

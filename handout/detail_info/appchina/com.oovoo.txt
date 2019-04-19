@@ -1,0 +1,2 @@
+317,ooVoo Video Chat,社交网络,4.2.1,,33.83M,/app/com.oovoo,"ooVoo Android 可以进行免费的 6人群组视频聊天、即时通讯。"
+ooVoo Android 可以进行免费的 6人群组视频聊天、即时通讯。使用安卓平台上的ooVoo客户端能免费向安卓或其他平台（包括iPhone/iPad，PC，Mac）的 ooVoo 联系人进行多方视频聊天。ooVoo 可用于任何无线网络，包括3G、4G、Wi-Fi 或 WiMAX，如果您的 wifi 信号够好，您可获得最佳体验。

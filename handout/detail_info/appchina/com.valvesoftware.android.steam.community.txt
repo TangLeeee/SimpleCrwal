@@ -1,0 +1,2 @@
+357,Steam,社交网络,2.3.9,,2.69M,/app/com.valvesoftware.android.steam.community,"Steam官方客户端"
+Steam官方应用程序，你现在可以用手机随时随地加入到Steam社区中去。 用户可以借助客户端与好友聊天、浏览用户和团队信息、阅读最新的游戏新闻，并且能够查看最新的Steam销售游戏。
